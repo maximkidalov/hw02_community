@@ -1,0 +1,11 @@
+{% if items.paginator.num_pages > 1 %}
+  <p style="text-align:center">
+    {% if items.has_previous %}
+      <a href="?page={{ items.previous_page_number }}">&#171;</a>
+    {% endif %}
+    {{ items.number }} из {{ items.paginator.num_pages }}
+    {% if items.has_next %}
+      <a href="?page={{ items.next_page_number }}">&#187;</a>
+    {% endif %}
+  </p>
+{% endif %}
