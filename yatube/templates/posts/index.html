@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+ Главная страница Yatube
+{% endblock title %}
+{% block content %}
+  <h1>Последние обновления на сайте</h1>
+  {% for post in posts %}
+  {% include 'CardOfPost_index.html' %}
+  {% endfor %}
+{% endblock content %}
